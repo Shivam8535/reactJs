@@ -8,8 +8,12 @@ body {
     background-image: linear-gradient(to right top, #d16b6b, #d75072, #d63183, #cb099d, #ae00bd, #8f46db, #6465f1, #007cff, #00a4ff, #00c5ff, #00e2ff, #5ffbf1);
 } */
 * {
-    height: fit-content;
+    background-repeat: no-repeat;
     box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right top, #ff0000, #ff0042, #ff0071, #eb00a0, #c100c9, #9950e7, #6570f9, #0087ff, #00afff, #00d0ff, #00eadc, #00ffa6);
 }
 
 nav {
@@ -38,21 +42,26 @@ header nav .left {
     }
 
     header nav .center .search {
-       display: none;
+        display: none;
     }
+
     header nav .right {
         width: 100%;
         justify-content: end;
     }
+
     header nav .right .item2 {
         display: none;
     }
+
     header nav .right .item3 {
         display: none;
     }
+
     header nav .right .item4 {
         display: none;
     }
+
     header nav .right .item1 {
         display: none;
     }
