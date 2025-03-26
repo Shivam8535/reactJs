@@ -1,6 +1,5 @@
+import { Link } from 'react-router-dom';
 import '../style/output.css';
-
-
 export const Nav = () => {
     return (
         <>
@@ -9,10 +8,10 @@ export const Nav = () => {
                 <nav>
                     <div class="left justify-center flex lg:block">
                         <ul class="flex [&>*]:flex">
-                            <li><a class="px-3 py-2 text-indigo-400 hover:bg-indigo-300" href='/'>Home</a></li>
-                            <li><a class="px-3 py-2 hover:bg-indigo-300" href='/'>Contact</a></li>
-                            <li><a class="px-3 py-2 hover:bg-indigo-300" href='/'>Product</a></li>
-                            <li><a class="px-3 py-2 hover:bg-indigo-300" href='/'>About</a></li>
+                            <li><Link class="px-3 py-2 text-indigo-400 hover:bg-indigo-300" to='/'>Home</Link></li>
+                            <li><Link to='/contact' class="px-3 py-2 hover:bg-indigo-300">Contact</Link></li>
+                            <li><Link to='/product' class="px-3 py-2 hover:bg-indigo-300">Product</Link></li>
+                            <li><Link to='/About' class="px-3 py-2 hover:bg-indigo-300">About</Link></li>
                         </ul>
                     </div>
                 </nav>

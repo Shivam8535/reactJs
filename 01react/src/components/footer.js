@@ -1,9 +1,9 @@
-
+import '../style/input.css'
 
 
 const Footer = () => {
     return (
-        <div className="">Footer</div>
+        <footer className="footer">Footer</footer>
     );
 }
 

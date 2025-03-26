@@ -1,13 +1,23 @@
 import './style/App.css';
 import Footer from './components/footer';
 import { Nav } from './components/nav';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <Nav />
-      <h1>Home</h1>
-      <Footer />
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path='/' element={<h1>Home</h1>} />
+          <Route path='/Product' element={<h1>Product</h1>} />
+          <Route path='/Contact' element={<h1>Contact</h1>} />
+          <Route path='/About' element={<h1>About</h1>} />
+        </Routes>
+
+        {/* Footer */}
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
