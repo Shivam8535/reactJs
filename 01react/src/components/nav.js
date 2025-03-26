@@ -12,6 +12,7 @@ export const Nav = () => {
                             <li><Link to='/contact' class="px-3 py-2 hover:bg-indigo-300">Contact</Link></li>
                             <li><Link to='/product' class="px-3 py-2 hover:bg-indigo-300">Product</Link></li>
                             <li><Link to='/About' class="px-3 py-2 hover:bg-indigo-300">About</Link></li>
+                            <li><Link to='/login' class="px-3 py-2 hover:bg-indigo-300">logIn</Link></li>
                         </ul>
                     </div>
                 </nav>

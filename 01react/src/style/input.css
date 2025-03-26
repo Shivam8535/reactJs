@@ -12,6 +12,8 @@ body {
     box-sizing: border-box;
 }
 
+
+
 body {
     background-image: linear-gradient(to right top, #ff0000, #ff0042, #ff0071, #eb00a0, #c100c9, #9950e7, #6570f9, #0087ff, #00afff, #00d0ff, #00eadc, #00ffa6);
 }
@@ -35,6 +37,24 @@ footer {
     position: absolute;
     bottom: 0px;
 }
+
+.user, .password{
+    color: white;
+    padding-left: 1rem;
+}
+
+input:focus{
+    border: 1px solid red;
+    border-style: none;
+}
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 600px) {
     header {
