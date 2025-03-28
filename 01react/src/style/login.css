@@ -1,5 +1,5 @@
 .label {
-    color: rgb(92, 86, 86);
+    color: rgb(50, 46, 46);
     position: relative;
     top: 2.6rem;
     left: 1rem;
@@ -7,10 +7,21 @@
     z-index: -1;
     transition: 0.5s all;
 }
+input{
+    color: gray;
+}
+div.f {
+    /* filter: grayscale(4%) sepia(17%) brightness(84%) hue-rotate(46deg) saturate(166%) contrast(97%) invert(6%) drop-shadow(13px -23px 163px #000000); */
+    backdrop-filter: blur(5px);
+}
 
+h1 {
+    font-size: 1.4rem;
+}
 
 .label2 {
     transition: 0.5s all;
-    color: #0be5e5b6;
+    color: #01ffff;
     top: 0;
 }
+

@@ -1,12 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./src/style/output.css">
+    <link rel="stylesheet" href="./src//style/login.css">
 </head>
+
 <body>
-    
+    <div class="w-full h-[80vh] flex justify-center items-center">
+        <p class="demo"></p>
+        <div class="f">
+            <form class="border rounded-3xl lg:w-[16rem] flex-col w-[18rem] px-3 py-2 h-[20rem]">
+                <h1 class="text-center font-bold text-[#01ffff]">Welocome</h1>
+                <label id='label' class="label mx-1 my-3">User Id & Email</label>
+                <input id='user' class="user  mx-1 my-3 border-gray-400 border-1 rounded-2xl lg:px-4 py-1"
+                    type="text" /><br />
+                <label id='label' class="label mx-1 my-3">Password</label><br />
+                <input id='pass' class="password mx-1 my-3 border-gray-400 border-1 rounded-2xl lg:px-4 py-1"
+                    type="password" />
+                <br />
+                <center><button
+                        class="mt-5 border rounded-2xl px-4 py-1 capitalize hover:border-[#01ffff] hover:text-[#01ffff]">log
+                        In</button></center>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const inputs = document.querySelectorAll('input');
+
+            inputs.forEach((input, index) => {
+                input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        if (input.value.trim() === '') {
+                            input.required = true;
+                            input.focus();
+                        }
+                        else {
+                            e.preventDefault();
+                            const nextInput = inputs[index + 1];
+                            if (nextInput) {
+                                nextInput.focus();
+                            }
+                        }
+                    }
+                });
+            });
+        });
+        const user = document.getElementById('user');
+        const pass = document.getElementById('pass');
+        const label = document.querySelectorAll('label');
+        const demo = document.getElementById('demo');
+
+        // Events for user
+        user.addEventListener('focus', a);
+        user.addEventListener('mouseover', a);
+        user.addEventListener('focusout', b);
+        user.addEventListener('mouseout', e);
+        // Events for password
+        pass.addEventListener('focus', c);
+        pass.addEventListener('mouseover', c);
+        pass.addEventListener('focusout', d);
+        pass.addEventListener('mouseout', f);
+
+        // Functions
+        function a() {
+            label[0].classList.add('label2');
+        }
+        function b() {
+            if (user.value === '') {
+                label[0].classList.add('label');
+                label[0].classList.remove('label2');
+            }
+        }
+        function c() {
+            label[1].classList.add('label2');
+        }
+        function d() {
+            if (pass.value === '') {
+                label[1].classList.add('label');
+                label[1].classList.remove('label2');
+            }
+        }
+        function e() {
+            if (document.activeElement === user) {
+                a();
+            } else {
+                b();
+            }
+        }
+        function f() {
+            if (document.activeElement === pass) {
+                c();
+            } else {
+                d();
+            }
+        }
+    </script>
 </body>
+
 </html>

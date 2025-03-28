@@ -1,7 +1,7 @@
 import '../style/car.css'
 import { useEffect } from 'react';
 
-const Rs = () => {
+export const Rs = () => {
     useEffect(() => {
         const playbackConst = 500; // lower numbers = faster playback
         const setHeight = document.getElementById("set-height"); // get page height from video duration
