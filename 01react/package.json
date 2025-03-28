@@ -2,6 +2,7 @@
   "name": "01react",
   "version": "0.1.0",
   "private": true,
+  "proxy":"https://localhost:3001",
   "dependencies": {
     "@tailwindcss/cli": "^4.0.16",
     "@testing-library/dom": "^10.4.0",

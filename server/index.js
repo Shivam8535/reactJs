@@ -1,32 +1,19 @@
-import express from 'express';
-import { configDotenv } from 'dotenv';
-import mongoose from 'mongoose';
-import { cartsRoute, orderRoute, prodRoute, userRoute } from './routes/routes.js';
+import express from "express";
+import { configDotenv } from "dotenv";
 configDotenv();
-const port = process.env.PORT || 3000;
+import mongoose from "mongoose";
+
+mongoose.connect(process.env.DB_URI).then(console.log(`db connected`));
 const app = express();
-
-const dbUri = process.env.MONGODB_URI;
-mongoose.connect(dbUri).then(() => {
-    console.log('db connection is success');
-}).catch((err) => {
-    console.log(err);
-});
+const port = process.env.SERVER_PORT || 4000;
 
 
-// Api Routes
-app.use(express.json())
-
-app.use('/api', userRoute)
-app.use("/api/products", prodRoute)
-app.use("/api/carts/", cartsRoute)
-app.use("/api/orders/", orderRoute)
-
-
-
+app.get('/', (req, res) => {
+    res.send("Hello World");
+})
 
 
 
 app.listen(port, () => {
-    console.log(`your server is running at http://localhost:${port}`);
-});
+    console.log(`serever is running at http://localhost:${port}`);
+})

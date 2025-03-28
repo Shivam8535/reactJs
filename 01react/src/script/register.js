@@ -1,6 +1,10 @@
 import { useEffect } from 'react';
 
+
 const Regisjs = () => {
+
+   
+
     useEffect(() => {
         const inputs = document.querySelectorAll('input');
 
@@ -39,7 +43,7 @@ const Regisjs = () => {
         // Events for email
         email.addEventListener('focus', emailfn);
         email.addEventListener('mouseover', emailfn);
-        email.addEventListener('focusout', emailfn);
+        email.addEventListener('focusout', emailfn1);
         email.addEventListener('mouseout', emailfn2);
 
         // Functions
@@ -65,7 +69,7 @@ const Regisjs = () => {
             label[2].classList.add('label2');
         }
         function emailfn1() {
-            if (pass.value === '') {
+            if (email.value === '') {
                 label[2].classList.add('label');
                 label[2].classList.remove('label2');
             }
@@ -78,7 +82,7 @@ const Regisjs = () => {
             }
         }
         function emailfn2() {
-            if (document.activeElement === pass) {
+            if (document.activeElement === email) {
                 emailfn();
             } else {
                 emailfn1();
