@@ -21,6 +21,11 @@ export const SignUp = () => {
         });
         result = await result.json();
         console.warn(result);
+        if (result.success) {
+            alert('Registration successful!');
+        } else {
+            alert(`Registration failed: ${result.message}`);
+        }
     }
 
     return (
