@@ -9,8 +9,18 @@ export const SignUp = () => {
     const [password, setPass] = useState('');
     const [email, setEmail] = useState('');
 
+
     const submit = async () => {
-        alert(username, password, email);
+        console.log(`Username: ${username}, Password: ${password}, Email: ${email}`);
+        let result = await fetch('http://localhost:4040/api/register', {
+            method: 'post',
+            body: JSON.stringify({ username, email, password }),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });
+        result = await result.json();
+        console.warn(result);
     }
 
     return (

@@ -1,17 +1,19 @@
 import express from "express";
 import { configDotenv } from "dotenv";
 configDotenv();
-import mongoose from "mongoose";
+import "./db/config.js";
+import cors from 'cors';
+import { authRouter } from "./routers/routes.js";
 
-mongoose.connect(process.env.DB_URI).then(console.log(`db connected`));
+
 const app = express();
 const port = process.env.SERVER_PORT || 4000;
+app.use(express.json())
+app.use(cors())
 
 
-app.get('/', (req, res) => {
-    res.send("Hello World");
-})
-
+// routers for Auth Api
+app.use('/api', authRouter);
 
 
 app.listen(port, () => {
